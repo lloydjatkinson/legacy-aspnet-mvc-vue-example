@@ -1,0 +1,21 @@
+{
+  "name": "vue-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build && renamer --regex --find \"([0-9a-f]+)\\.((?:\\w+)(?:.map)?)$\" --replace \"$2\" \"dist/**\"",
+    "lint": "vue-cli-service lint",
+    "prep": "renamer --regex --find \"([0-9a-f]+)\\.((?:\\w+)(?:.map)?)$\" --replace \"$2\" \"dist/**\""
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.4",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.4",
+    "@vue/cli-service": "^3.0.0-rc.4",
+    "renamer": "^0.7.3",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
